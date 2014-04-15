@@ -34,12 +34,12 @@
 
 			<div>
 				{% if latest_post_list %}
-			    <ul>
-			    {% for post in latest_post_list %}
-			        <!-- <li><a href="{% url 'detail' post.id %}">{{ post.title }}</a></li> -->
-			        <li><a href="/blog/{{post.slug}}">{{post.title}}</a></li>
-			    {% endfor %}
-			    </ul>
+				    <ul>
+				    {% for post in latest_post_list %}
+				        <!-- <li><a href="{% url 'detail' post.id %}">{{ post.title }}</a></li> -->
+				        <li><a href="/blog/{{post.slug}}">{{post.title}}</a></li>
+				    {% endfor %}
+				    </ul>
 				{% else %}
 				    <p>No posts are available.</p>
 				{% endif %}
@@ -47,11 +47,11 @@
 			
 			<div>
 				{% if tags_list %}
-				<ul>
-					{% for tag in tags_list %}
-						<li>{{ tag }}</li>
-					{% endfor %}
-				</ul>
+					<ul>
+						{% for tag in tags_list %}
+							<li>{{ tag }} {{tag.numInstances}}</li>
+						{% endfor %}
+					</ul>
 				{% else %}
 					<p>No tags.</p>
 				{% endif %}

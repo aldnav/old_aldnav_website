@@ -1,5 +1,11 @@
 <h1>{{ post.title }}</h1>
 <h5>{{ post.pub_date }}</h5>
+{% if likes %}
+	<p>likes</p>
+{% else %}
+	<p>No likes.</p>
+{% endif %}
+<a href="like">Like</a>
 <article>{{ post.body }}</article>
 {% if tags %}
 	<ul>

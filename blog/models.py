@@ -36,8 +36,22 @@ class Tag(models.Model):
     name = models.CharField(max_length=100)
     posts = models.ManyToManyField(Post)
     
+    def numInstances(self):
+        return self.posts.all().count()
+    
     def __unicode__(self):
         return self.name
     
     class Meta:
         ordering = ('name',)
+
+class Like(models.Model):
+    user = models.IPAddressField(default="192.168.254.254",blank=True)
+    post = models.ForeignKey(Post)
+    created = models.DateTimeField(auto_now_add=True)
+ 
+    def __unicode__(self):
+        return self.post.title
+     
+    class Meta:
+        ordering = ('created',)
