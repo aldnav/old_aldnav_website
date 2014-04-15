@@ -1,0 +1,12 @@
+<h1>{{ post.title }}</h1>
+<h5>{{ post.pub_date }}</h5>
+<article>{{ post.body }}</article>
+{% if tags %}
+	<ul>
+	{% for tag in tags %}
+		<li>{{ tag }}</li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No tags.</p>
+{% endif %}
