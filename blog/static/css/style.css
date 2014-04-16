@@ -43,6 +43,7 @@ header h1{
 .card li {
 	margin: 0 auto;
 	width: inherit;
+	border-bottom: 1px solid #DDDDDD; 
 }
 
 .card li a p {
@@ -50,15 +51,65 @@ header h1{
 	font-family: 'Roboto Thin';
 }
 
-.card li a h4 {
+.card li a h3 {
+	color: #1ABC9C;
 	font-family: 'Roboto Regular';
 }
 
+.card li a h6 {
+	color: #444444;
+	font-family: 'Roboto Thin';
+	font-size: 0.75em;
+}
+
 .blog-preview {
-	border: 1px solid #DDDDDD;
-	background-color: white;
+	/*background-color: white;*/
 }
 
 .tag-item {
+	font-size: 0.75em;
+}
+
+
+.nav-container {
+	background-color: #34495E;
+}
+
+.navbar {
+	background-color: transparent;
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.navbar-nav > li > a {
+	color: white;
+	opacity: 0.6;
+	transition: all 0.2s ease;
+}
+
+.navbar-nav > li > a:hover{
+	background: #2F4256;
+	opacity: 1;
+}
+
+.navbar-brand {
+	color: white;
+}
+
+.navbar-brand:hover{
+	color: white;
+}
+
+.article {
+	top: 2em;
+	font-family: 'Roboto Thin';
+}
+
+.article h1 {
+	font-size: 4em;
+}
+
+.article h5 {
 	font-size: 0.75em;
 }

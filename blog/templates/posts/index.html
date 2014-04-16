@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-	{% include "posts/head.html" %}
+	{% include "pre/head.html" %}
 
 	<body>
 		<div>
+			{% include "pre/navigation.html" %}
 			<header>
 				<h1>Thoughts</h1>
 			</header>
-			<!-- <nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav> -->
 			<div class="row clearfix">
 				<div class="col-md-8 col-md-offset-1 column blog-preview">
 				{% if latest_post_list %}
-				    <ul class="list-unstyled">
+				    <ul class="list-unstyled card-list">
 				    {% for post in latest_post_list %}
 				    	<div class="card col-md-12">
 				    	<li>
 					        <a href="/blog/{{post.slug}}">
-					        	<h4> {{post.title}} </h4>
+					        	<h3> {{post.title}} </h3>
+					        	<h6> {{post.pub_date|date}} </h6>
 					        	<p>{{post.description}}</p>
 					        </a>
 					    </li>
-					    <hr />
 				        </div>
 				    {% endfor %}
 				    </ul>
@@ -53,7 +46,8 @@
 				<p>
 					&copy; Copyright  by Aldrin
 				</p>
-			</footer> -->
+			</footer> -->			
 		</div>
+		{% include "pre/footscripts.html"%}
 	</body>
 </html>
