@@ -1,3 +1,64 @@
-li a {
-	color: green;
+@font-face {
+  font-family: 'Walter Turncoat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Walter Turncoat.woff') format('woff');
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Thin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'OpenSans Regular';
+}
+
+header h1{
+	font-family: 'Walter Turncoat',serif;
+	text-align: center;
+}
+
+.card {
+	/*border-bottom: 1px solid #DDDDDD;*/
+}
+
+.card a{
+	text-decoration: none;
+}
+
+.card li {
+	margin: 0 auto;
+	width: inherit;
+}
+
+.card li a p {
+	color: #444444;
+	font-family: 'Roboto Thin';
+}
+
+.card li a h4 {
+	font-family: 'Roboto Regular';
+}
+
+.blog-preview {
+	border: 1px solid #DDDDDD;
+	background-color: white;
+}
+
+.tag-item {
+	font-size: 0.75em;
 }

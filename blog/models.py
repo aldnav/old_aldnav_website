@@ -6,6 +6,7 @@ from django.template.defaultfilters import slugify
 class Post(models.Model):
     title = models.CharField(max_length = 100, unique=True)
     slug = models.SlugField(editable=False, default='', unique=True)
+    description = models.CharField(max_length = 100)
     body = models.TextField()
     pub_date = models.DateTimeField('date published')
     
